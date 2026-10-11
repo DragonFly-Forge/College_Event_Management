@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSE (AIML) Events | IEM Kolkata</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><img src="images/logo.png" alt="IEM logo" width="36" height="36"><span>IEM · CSE (AIML)</span></a>
+  <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#home">Home</a><a href="#events">Events</a><a href="#register">Registration</a>
+    <a href="#gallery">Gallery</a><a href="#about">About us</a><a href="#contact">Contact</a>
+    <button id="themeBtn" class="theme-btn" aria-label="Toggle dark mode">◐</button>
+  </nav>
+</header>
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">Institute of Engineering &amp; Management, Kolkata</p>
+    <h1>Department of CSE (AIML) Event Hub</h1>
+    <p>Discover upcoming workshops, hackathons and talks, register in seconds, and relive the highlights.</p>
+    <p class="clock">IST <strong id="clock">--:--:--</strong></p>
+  </div>
+  <div class="countdown" aria-live="polite">
+    <p>Next event</p><h2 id="cdName">—</h2>
+    <div class="cd-grid">
+      <div><b id="cdD">0</b><span>days</span></div><div><b id="cdH">0</b><span>hrs</span></div>
+      <div><b id="cdM">0</b><span>min</span></div><div><b id="cdS">0</b><span>sec</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <h2>Upcoming Events</h2>
+  <div id="chips" class="chips"></div>
+  <div id="eventList" class="events"></div>
+</section>
+
+<section id="register">
+  <h2>Event Registration</h2>
+  <form id="regForm" novalidate>
+    <div class="row">
+      <label>Student name<input name="name" type="text" autocomplete="name"><small class="err"></small></label>
+      <label>Roll number (10 digits)<input name="roll" type="text" inputmode="numeric"><small class="err"></small></label>
+    </div>
+    <div class="row">
+      <label>Department<select name="dept"><option value="">Select…</option><option>CSE (AIML)</option><option>CSE</option><option>CSE (DS)</option><option>IT</option><option>ECE</option><option>EE</option><option>Other</option></select><small class="err"></small></label>
+      <label>Email<input name="email" type="email" autocomplete="email"><small class="err"></small></label>
+    </div>
+    <div class="row">
+      <label>Phone<input name="phone" type="tel" autocomplete="tel"><small class="err"></small></label>
+      <label>Event<select name="event" id="eventSelect"><option value="">Select…</option></select><small class="err"></small></label>
+    </div>
+    <fieldset><legend>Gender</legend>
+      <label class="inline"><input type="radio" name="gender" value="Female"> Female</label>
+      <label class="inline"><input type="radio" name="gender" value="Male"> Male</label>
+      <label class="inline"><input type="radio" name="gender" value="Other"> Other</label>
+      <small class="err"></small>
+    </fieldset>
+    <button type="submit" class="btn">Register</button>
+    <p class="ok" id="regOk" role="status"></p>
+  </form>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <figure><img src="images/gallery1.png" alt="Hackathon night" loading="lazy"><figcaption>Hackathon night</figcaption></figure>
+    <figure><img src="images/gallery2.png" alt="ML workshop" loading="lazy"><figcaption>ML workshop</figcaption></figure>
+    <figure><img src="images/gallery3.png" alt="Guest lecture" loading="lazy"><figcaption>Guest lecture</figcaption></figure>
+    <figure><img src="images/gallery4.png" alt="Project expo" loading="lazy"><figcaption>Project expo</figcaption></figure>
+    <figure><img src="images/gallery5.png" alt="Cultural evening" loading="lazy"><figcaption>Cultural evening</figcaption></figure>
+    <figure><img src="images/gallery6.png" alt="Team photo" loading="lazy"><figcaption>Team photo</figcaption></figure>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>The Department of Computer Science &amp; Engineering (AI &amp; ML) at IEM Kolkata trains students in machine learning, data science and software engineering through hands-on labs, projects and student-run events.</p>
+  <div class="coords">
+    <div class="card"><b>Dr. A. Sen</b><span>Faculty Coordinator</span></div>
+    <div class="card"><b>Prof. R. Das</b><span>Faculty Co-coordinator</span></div>
+    <div class="card"><b>Student Lead</b><span>Event Operations</span></div>
+    <div class="card"><b>Student Lead</b><span>Design &amp; Outreach</span></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <address>
+      <p><b>Address:</b> IEM, Salt Lake Sector V, Kolkata, West Bengal</p>
+      <p><b>Email:</b> events@example.edu</p>
+      <p><b>Phone:</b> +91 98765 43210</p>
+      <p><b>Office hours:</b> Mon–Fri, 10:00 – 17:00</p>
+    </address>
+    <form id="fbForm" novalidate>
+      <label>Name<input name="name" type="text"><small class="err"></small></label>
+      <label>Email<input name="email" type="email"><small class="err"></small></label>
+      <label>Feedback<textarea name="msg" rows="4"></textarea><small class="err"></small></label>
+      <button type="submit" class="btn">Send feedback</button>
+      <p class="ok" id="fbOk" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>© 2026 Department of CSE (AIML), IEM Kolkata · PCCCS382 IT Workshop</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
